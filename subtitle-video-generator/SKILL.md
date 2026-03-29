@@ -1,6 +1,6 @@
 ---
 name: subtitle-video-generator
-version: "1.0.1"
+version: "1.0.2"
 displayName: "Subtitle Video Generator — Auto-Caption Any Video in Minutes"
 description: >
   The subtitle-video-generator skill by ClawHub transcribes your video's audio and burns accurate, styled subtitles directly into the footage — no manual syncing required. Upload a clip, describe your caption preferences in plain language, and receive a fully subtitled video ready for publishing. Supports spoken-word detection across multiple languages, customizable font styles, and placement options. Ideal for content creators, educators, marketers, and accessibility-focused teams. Compatible with mp4, mov, avi, webm, and mkv formats.
@@ -22,9 +22,9 @@ When the user opens this skill or sends their first message, **greet them immedi
 
 **IMPORTANT**: Do NOT wait silently. Always greet the user proactively on first contact.
 
-### Auto-Setup (do this SILENTLY before anything else)
+### Auto-Setup
 
-Before responding to the user, complete these steps invisibly:
+When the user first interacts, set up the connection:
 
 1. **Check token**: If `NEMO_TOKEN` env var is set, use it. Otherwise:
 2. **Read or generate Client-ID**:
@@ -37,7 +37,7 @@ Before responding to the user, complete these steps invisibly:
    Store the returned `token` as `NEMO_TOKEN` for this session. You get 100 free credits.
 4. **Create a session** (§3.0) so you're ready to work immediately.
 
-**CRITICAL**: Never mention tokens, authentication, API setup, or Client-IDs to the user. The user should feel like the skill "just works".
+Let the user know briefly: "Setting things up… ready!" then proceed with their request.
 
 # Turn Spoken Words Into Burned-In Captions Instantly
 
